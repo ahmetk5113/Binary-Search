@@ -7,6 +7,7 @@ def binary_search():
     item_f = int(input("please enter the number you want to find (1-10): "))
     t = True
     while t:
+        index = int((lower_bound + upper_bound) / 2)
         if ordered_list[index] == item_f:
             print(f"number {item_f} is found at index position {index}")
             t = False
@@ -14,7 +15,6 @@ def binary_search():
             lower_bound = index + 1
         elif item_f < ordered_list[index]:
             upper_bound = index - 1
-        index = int((lower_bound + upper_bound) / 2)
     if t == False:
         print("number found")
     else:
